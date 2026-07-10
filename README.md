@@ -1,5 +1,7 @@
 # Creality Ender 3 V4.2.7 RET6 (512K) Firmware Build Guide
 
+This is a fork from the marlin repo (https://github.com/marlinfirmware/marlin) stable branch bugfix-2.1.x as of 07/07/2026
+
 1. This setup is for the Creality Ender 3 Silent Motherboard, High Performance 32 Bit 3D Printer Noiseless Mother Board V4.2.7 with TMC2225 Driver Marlin for Ender 3 RET6 version 512K flash.
    Amazon link: https://www.amazon.com/dp/B0C77RBBP5
 
@@ -9,7 +11,7 @@
 3. Install the Creality CR Touch Auto Leveling Kit, 3D Printer Bed Auto Leveling Sensor Kit for Ender 3/ Ender 3 Pro/Ender 3 V2/ Ender 3 Max/Ender 5/Ender 5 Pro and CR 10 with 32 Bit V4.2.2/V4.2.7 Mainboard
    Amazon link: https://www.amazon.com/Creality-Leveling-3D-Printer-Mainboard/dp/B09DVYZSYJ
 
-4. Build the firmware bin with the included changes in these files:
+4. Build the firmware bin file with the included changes in these files:
    - Marlin/_Bootscreen.h
    - Marlin/_Statusscreen.h
    - Marlin/Configuration_adv.h
@@ -23,7 +25,7 @@
 
    The script builds the STM32F103RE_creality environment and prints the full path to the generated firmware .bin file.
 
-Use the following shell script to build the firmware.bin file
+The contents of the build_firmware_bin.sh shell script that is used to build the firmware.bin file:
 
 ```bash
 #!/usr/bin/env bash

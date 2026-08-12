@@ -40,7 +40,7 @@ if [ -z "$PIO" ] || [ ! -x "$PIO" ]; then
 fi
 
 cd "$REPO_DIR"
-
+"$PIO" run -t clean
 "$PIO" run -e STM32F103RE_creality
 
 BIN_PATH="$(find .pio/build/STM32F103RE_creality -type f -name '*.bin' 2>/dev/null | sort | tail -n 1 || true)"
